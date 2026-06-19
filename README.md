@@ -12,6 +12,6 @@ Dieses Plugin fügt dem Modmail.dev Bot den Befehl `.closerequest` hinzu.
 ## Installation
 Verwenden Sie den folgenden Befehl in Ihrem Modmail-Server:
 ```
-?plugin add breadybread123/FNFsupport-plugin
+?plugin add breadybread123/FNFsupport-plugin/FNFsupport
 ```
 *(Ersetzen Sie `?` durch Ihren Bot-Präfix)*
