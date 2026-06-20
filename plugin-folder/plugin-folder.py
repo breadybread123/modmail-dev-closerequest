@@ -58,6 +58,14 @@ class CloseRequestView(discord.ui.View):
         # Stop the view (and thus the timeout timer) immediately
         self.stop()
         await interaction.response.edit_message(content="Ticket remains open.", view=None)
+        
+        # Send a message to the staff channel that the close request was denied
+        staff_denied_embed = discord.Embed(
+            title="Close Request Denied",
+            description=f"The close request for this ticket was denied by {self.recipient.display_name} (ID: {self.recipient.id}). The ticket remains open.",
+            color=discord.Color.orange()
+        )
+        await self.original_ctx.send(embed=staff_denied_embed)
 
 class CloseRequest(commands.Cog):
     def __init__(self, bot: commands.Bot):
